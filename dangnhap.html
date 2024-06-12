@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style/dangnhap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form" id="login-form">
+            <h2>Login</h2>
+            <form onsubmit="return validateLogin()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Login</button>
+                <button type="button" onclick="resetForm()">Cancel</button>
+                <button type="button" onclick="forgotPassword()">Forgot Password</button>
+                <button type="button" onclick="showRegisterForm()">Register</button>
+                <div id="login-error" class="error-message"></div>
+            </form>
+        </div>
+        
+        <div class="register-form" id="register-form" style="display:none;">
+            <h2>Register</h2>
+            <form onsubmit="return validateRegister()">
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="username">
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password">
+                <label for="reg-repassword">Re-enter Password:</label>
+                <input type="password" id="reg-repassword" name="repassword">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <button type="submit">Register</button>
+                <button type="button" onclick="resetRegisterForm()">Cancel</button>
+                <div id="register-error" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/dangnhap.js"></script>
+</body>
+</html>
